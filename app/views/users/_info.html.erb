@@ -1,5 +1,5 @@
 <h2>User info</h2>
-<%= attachment_image_tag(user, :profile_image_id, :fill, 100, 100, fallback: "no_image.jpg") %>
+<%= attachment_image_tag(user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg") %>
 <table>
   <tr>
     <td><strong>name</strong></td><td><%= user.name %></td>
@@ -8,4 +8,6 @@
     <td><strong>introduction</strong></td><td><%= user.introduction %></td>
   </tr>
 </table>
-設定ボタン
+<%= link_to edit_user_path(user.id) do %>
+<button type="button" class="btn btn-outline-secondary btn-block"><i class="fas fa-user-cog"></i></button>
+<% end %>
