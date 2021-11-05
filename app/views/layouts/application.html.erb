@@ -42,7 +42,7 @@
                     <i class="fas fa-book-open" style="color:white"></i>Books
                   </li>
                 <% end %>
-                <%= link_to destroy_user_session_path do %>
+                <%= link_to destroy_user_session_path, method: :delete do %>
                   <li class="nav-item">
                     <i class="fas fa-sign-out-alt" style="color:white"></i>Log out
                   </li>
@@ -76,6 +76,7 @@
       </header>
 
       <main>
+        <%= notice %>
         <%= yield %>
       </main>
 
