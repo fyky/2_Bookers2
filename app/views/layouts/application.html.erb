@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
    <!-- FontAwesomeの読み込み -->
+      <!-- FontAwesomeの読み込み -->
     <script src="https://kit.fontawesome.com/a089111b95.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -27,29 +28,45 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
                 <%= link_to root_path do %>
-                  <li class="nav-item">Home</li>
+                  <li class="nav-item">
+                    <i class="fas fa-home" style="color:white"></i>Home
+                  </li>
                 <% end %>
                 <%= link_to users_path do %>
-                  <li class="nav-item">Users</li>
+                  <li class="nav-item">
+                    <i class="fas fa-users" style="color:white"></i>Users
+                  </li>
                 <% end %>
                 <%= link_to books_path do %>
-                  <li class="nav-item">Books</li>
+                  <li class="nav-item">
+                    <i class="fas fa-book-open" style="color:white"></i>Books
+                  </li>
                 <% end %>
                 <%= link_to destroy_user_session_path do %>
-                  <li class="nav-item">Log out</li>
+                  <li class="nav-item">
+                    <i class="fas fa-sign-out-alt" style="color:white"></i>Log out
+                  </li>
                 <% end %>
               <% else %>
                 <%= link_to root_path do %>
-                  <li class="nav-item">Home</li>
+                  <li class="nav-item">
+                    <i class="fas fa-home" style="color:white"></i>Home
+                  </li>
                 <% end %>
                 <%= link_to about_path do %>
-                  <li class="nav-item">About</li>
+                  <li class="nav-item">
+                    <i class="fas fa-link" style="color:white"></i>About
+                  </li>
                 <% end %>
                 <%= link_to new_user_registration_path do %>
-                  <li class="nav-item">Sign up</li>
+                  <li class="nav-item">
+                    <i class="fas fa-user-plus" style="color:white"></i>Sign up
+                  </li>
                 <% end %>
                 <%= link_to new_user_session_path do %>
-                  <li class="nav-item">Log in</li>
+                  <li class="nav-item">
+                    <i class="fas fa-sign-in-alt" style="color:white"></i>Log in
+                  </li>
                 <% end %>
             </ul>
               <% end %>
